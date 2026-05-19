@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Dieren</h1>
+    <ul>
+        <h2>Katachtigen</h2>
+        {% for katachtige in katachtigen %}
+            <li><a class="hover" href="katachtigen">{{ katachtige }} </a></li>
+        {% endfor %}
+        <h2>Mensapen</h2>
+        {% for mensapen in mensapen %}
+            <li><a class="hover" href="mensapen/{{ mensapen }}">{{ mensapen }}</a></li>
+        {% endfor %}
+        <h2>Beren</h2>
+        {% for beren in beren %}
+            <li><a class="hover" href="beren/{{ beren }}">{{ beren }}</a></li>
+        {% endfor %}
+        <h2>Kleine_roofdieren</h2>
+        {% for kleine_roofdieren in kleine_roofdieren %}
+            <li><a class="hover" href="kleine_roofdieren/{{ kleine_roofdieren }}">{{ kleine_roofdieren }}</a></li>
+        {% endfor %}
+        <h2>Zeedieren</h2>
+        {% for zeedieren in zeedieren %}
+            <li><a class="hover" href="zeedieren/{{ zeedieren }}">{{ zeedieren }}</a></li>
+        {% endfor %}
+        <h2>Hoefdieren</h2>
+        {% for hoefdieren in hoefdieren %}
+            <li><a class="hover" href="hoefdieren/{{ hoefdieren }}">{{ hoefdieren }}</a></li>
+        {% endfor %}
+        <h2>Vogels</h2>
+        {% for vogels in vogels %} 
+            <li><a class="hover" href="vogels/{{ vogels }}">{{ vogels }}</a></li>
+        {% endfor %}
+        <h2>Reptielen</h2>
+        {% for reptielen in reptielen %}
+            <li><a class="hover" href="reptielen/{{ reptielen }}">{{ reptielen }}</a></li>
+        {% endfor %}
+        <h2>Aquariumdieren</h2>
+        {% for aquariumdieren in aquariumdieren %}
+            <li><a class="hover" href="aquariumdieren/{{ aquariumdieren }}">{{ aquariumdieren }}</a></li>
+        {% endfor %}
+
+    </ul>
+{% endblock %}

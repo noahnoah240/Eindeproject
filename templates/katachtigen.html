@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h1>Katachtigen</h1>
+  <ul>
+    {% for katachtige in katachtigen %}
+      <li>{{ katachtige }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
