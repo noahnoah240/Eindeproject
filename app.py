@@ -5,6 +5,7 @@ from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 #maak arrays voor de verschillende categorieën dieren
+CATEGORIEEN = ["Katachtigen", "Mensapen", "Beren", "Kleine roofdieren", "Zeedieren", "Hoefdieren", "Vogels", "Reptielen", "Aquariumdieren"]
 KATACHTIGEN = ["Leeuw", "Amoertijger", "Jaguar", "Amoerluipaard"]
 MENSAPEN = ["Gorilla", "Chimpansee", "Uilenkopmeerkat"]
 BEREN = ["Brilbeer"]
@@ -17,13 +18,13 @@ AQUARIUMDIEREN = ["Tripische rifvissen", "Koralen", "Zoet- en zoutwatervissen"]
 #route voor de indexpagina met categorieën
 @app.route("/")
 def index():
-    return render_template("index.html", katachtigen=KATACHTIGEN, mensapen=MENSAPEN, beren=BEREN, kleine_roofdieren=KLEINE_ROOFDIEREN, zeedieren=ZEEDIEREN, hoefdieren=HOEFDIEREN , vogels=VOGELS, reptielen=REPTIELEN, aquariumdieren=AQUARIUMDIEREN)
+    return render_template("index.html", categorieen=CATEGORIEEN, katachtigen=KATACHTIGEN, mensapen=MENSAPEN, beren=BEREN, kleine_roofdieren=KLEINE_ROOFDIEREN, zeedieren=ZEEDIEREN, hoefdieren=HOEFDIEREN , vogels=VOGELS, reptielen=REPTIELEN, aquariumdieren=AQUARIUMDIEREN)
 #route voor verschillende categorieën 
 #route voor katachtigen
-@app.route("/katachtigen")
+@app.route("/Katachtigen")
 def katachtigen():
-    return render_template("katachtigen.html", katachtigen=KATACHTIGEN)
+    return render_template("Katachtigen.html", katachtigen=KATACHTIGEN)
 #route voor mensapen
-@app.route("/mensapen")
+@app.route("/Mensapen")
 def mensapen():
     return render_template("mensapen.html", mensapen=MENSAPEN)
